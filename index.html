@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>PT. DBL GLOBAL LOGISTICS | Your Trusted Logistics Partner</title>
+<title>PT. DBL GLOBAL LOGISTICS | Jasa Pengurusan Transportasi</title>
 
-<meta name="description" content="PT. DBL Global Logistics - Jasa Pengurusan Transportasi (JPT), freight forwarding, distribusi dan pengiriman barang di Indonesia.">
+<meta name="description" content="PT. DBL GLOBAL LOGISTICS - Jasa Pengurusan Transportasi (JPT), solusi pengiriman cepat, aman dan terpercaya.">
 
 <style>
 *{
@@ -17,12 +17,11 @@
 }
 
 :root{
-    --navy:#0b234b;
-    --navy2:#071936;
+    --navy:#0b2148;
     --orange:#ff7417;
-    --white:#ffffff;
-    --light:#f5f7fa;
     --dark:#111827;
+    --light:#f7f9fc;
+    --white:#ffffff;
     --gray:#667085;
 }
 
@@ -45,74 +44,65 @@ img{
 
 /* ================= NAVBAR ================= */
 
-header{
+.navbar{
     position:fixed;
     top:0;
     left:0;
     width:100%;
     z-index:999;
-    background:rgba(7,25,54,.96);
+    background:rgba(11,33,72,.96);
     backdrop-filter:blur(10px);
+    box-shadow:0 3px 15px rgba(0,0,0,.15);
 }
 
-.navbar{
+.nav-container{
     max-width:1200px;
     margin:auto;
     height:78px;
+    padding:0 25px;
     display:flex;
     align-items:center;
     justify-content:space-between;
-    padding:0 25px;
 }
 
-.logo{
+.logo-area{
     display:flex;
     align-items:center;
-    gap:10px;
+    gap:12px;
     color:white;
-    font-weight:900;
-    font-size:25px;
 }
 
-.logo span{
+.logo-area strong{
+    font-size:20px;
+    letter-spacing:.5px;
+}
+
+.logo-area span{
     color:var(--orange);
 }
 
-.logo-small{
-    font-size:12px;
-    display:block;
-    letter-spacing:2px;
-    color:#ddd;
-}
-
-.nav-links{
+.nav-menu{
     display:flex;
     align-items:center;
     gap:28px;
+    list-style:none;
 }
 
-.nav-links a{
+.nav-menu a{
     color:white;
     font-size:14px;
-    font-weight:700;
+    font-weight:bold;
     transition:.3s;
 }
 
-.nav-links a:hover{
+.nav-menu a:hover{
     color:var(--orange);
-}
-
-.nav-btn{
-    background:var(--orange);
-    color:white!important;
-    padding:12px 20px;
-    border-radius:6px;
 }
 
 .menu-btn{
     display:none;
+    font-size:28px;
     color:white;
-    font-size:30px;
     cursor:pointer;
 }
 
@@ -120,58 +110,72 @@ header{
 
 .hero{
     min-height:100vh;
-    background:
-    linear-gradient(90deg,rgba(7,25,54,.92),rgba(7,25,54,.45)),
-    url("hero.jpg") center/cover no-repeat;
-    display:flex;
-    align-items:center;
-    padding:120px 7% 70px;
+    padding-top:78px;
+    background:var(--navy);
     position:relative;
+    overflow:hidden;
+}
+
+.hero-image{
+    width:100%;
+    height:calc(100vh - 78px);
+    min-height:600px;
+    object-fit:cover;
+    opacity:.82;
+}
+
+.hero-overlay{
+    position:absolute;
+    inset:78px 0 0 0;
+    background:linear-gradient(
+        90deg,
+        rgba(11,33,72,.88) 0%,
+        rgba(11,33,72,.55) 48%,
+        rgba(11,33,72,.15) 100%
+    );
 }
 
 .hero-content{
-    max-width:760px;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-45%);
+    width:min(1200px,90%);
     color:white;
 }
 
-.hero-label{
+.hero-content small{
     color:var(--orange);
-    font-size:18px;
     font-weight:bold;
+    font-size:17px;
     letter-spacing:2px;
-    margin-bottom:15px;
 }
 
-.hero h1{
-    font-size:clamp(42px,6vw,76px);
-    line-height:1.05;
-    text-transform:uppercase;
-    font-weight:900;
+.hero-content h1{
+    font-size:clamp(40px,6vw,76px);
+    line-height:1.02;
+    margin:15px 0;
+    max-width:750px;
 }
 
-.hero h1 span{
+.hero-content h1 span{
     color:var(--orange);
 }
 
-.hero p{
-    font-size:20px;
-    margin:25px 0;
+.hero-content p{
     max-width:650px;
-    color:#eee;
-}
-
-.hero-buttons{
-    display:flex;
-    gap:15px;
-    flex-wrap:wrap;
+    font-size:19px;
+    color:#f0f3f8;
+    margin-bottom:28px;
 }
 
 .btn{
-    padding:15px 25px;
-    border-radius:6px;
-    font-weight:bold;
     display:inline-block;
+    padding:14px 25px;
+    border-radius:8px;
+    font-weight:bold;
     transition:.3s;
+    margin-right:8px;
 }
 
 .btn-orange{
@@ -180,7 +184,7 @@ header{
 }
 
 .btn-orange:hover{
-    background:#e85f05;
+    background:#e95f08;
     transform:translateY(-2px);
 }
 
@@ -197,30 +201,28 @@ header{
 /* ================= GENERAL ================= */
 
 section{
-    padding:95px 7%;
+    padding:90px 20px;
 }
 
 .container{
-    max-width:1200px;
+    max-width:1150px;
     margin:auto;
 }
 
 .section-title{
-    margin-bottom:50px;
+    margin-bottom:45px;
 }
 
 .section-title small{
     color:var(--orange);
-    font-weight:900;
+    font-weight:bold;
     letter-spacing:2px;
-    text-transform:uppercase;
 }
 
 .section-title h2{
-    font-size:46px;
-    line-height:1.1;
+    font-size:42px;
     color:var(--navy);
-    margin-top:8px;
+    margin-top:5px;
 }
 
 .section-title h2 span{
@@ -230,543 +232,507 @@ section{
 .section-title p{
     color:var(--gray);
     max-width:700px;
-    margin-top:15px;
 }
 
 /* ================= ABOUT ================= */
 
 .about{
-    background:#fff;
+    background:var(--light);
 }
 
 .about-grid{
     display:grid;
     grid-template-columns:1fr 1fr;
-    gap:60px;
+    gap:55px;
     align-items:center;
 }
 
 .about-image{
-    border-radius:14px;
+    border-radius:15px;
     overflow:hidden;
-    box-shadow:0 15px 40px rgba(0,0,0,.12);
+    box-shadow:0 15px 40px rgba(0,0,0,.13);
 }
 
 .about-image img{
     width:100%;
-    height:520px;
-    object-fit:cover;
 }
 
 .about-text p{
-    color:#555;
     margin-bottom:18px;
-    font-size:17px;
+    color:#475467;
 }
 
 .highlight{
-    border-left:5px solid var(--orange);
-    padding:18px 20px;
-    background:#f7f7f7;
-    margin-top:25px;
+    color:var(--orange);
     font-weight:bold;
 }
 
 /* ================= SERVICES ================= */
 
 .services{
-    background:var(--light);
+    background:white;
 }
 
 .service-grid{
     display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:25px;
+    grid-template-columns:repeat(2,1fr);
+    gap:28px;
 }
 
 .service-card{
+    border-radius:15px;
+    overflow:hidden;
     background:white;
-    padding:32px;
-    border-radius:12px;
-    border-bottom:5px solid transparent;
-    box-shadow:0 8px 25px rgba(0,0,0,.06);
+    box-shadow:0 8px 30px rgba(0,0,0,.09);
     transition:.3s;
+    border:1px solid #eee;
 }
 
 .service-card:hover{
-    transform:translateY(-8px);
-    border-color:var(--orange);
+    transform:translateY(-7px);
+    box-shadow:0 15px 40px rgba(0,0,0,.14);
 }
 
-.service-number{
-    font-size:40px;
-    font-weight:900;
-    color:#e9edf3;
+.service-card img{
+    width:100%;
+    height:230px;
+    object-fit:cover;
 }
 
-.service-card h3{
+.service-body{
+    padding:25px;
+}
+
+.service-body h3{
     color:var(--navy);
-    font-size:21px;
-    margin:5px 0 12px;
+    margin-bottom:10px;
+    font-size:22px;
 }
 
-.service-card p{
+.service-body p{
     color:var(--gray);
 }
 
 /* ================= AREA ================= */
 
 .area{
-    background:white;
+    background:var(--light);
 }
 
 .area-grid{
     display:grid;
     grid-template-columns:1fr 1fr;
-    gap:60px;
+    gap:50px;
     align-items:center;
 }
 
 .area-image{
-    border-radius:14px;
+    border-radius:15px;
     overflow:hidden;
+    box-shadow:0 12px 35px rgba(0,0,0,.12);
 }
 
-.area-image img{
-    height:480px;
-    width:100%;
-    object-fit:cover;
+.area-text h3{
+    color:var(--navy);
+    font-size:28px;
+    margin-bottom:18px;
+}
+
+.area-text p{
+    color:var(--gray);
+    margin-bottom:18px;
 }
 
 .area-list{
     list-style:none;
-    margin-top:25px;
 }
 
 .area-list li{
-    padding:14px 0;
-    border-bottom:1px solid #eee;
+    margin:12px 0;
     font-weight:bold;
 }
 
 .area-list li::before{
     content:"✓";
     color:var(--orange);
-    font-weight:900;
-    margin-right:12px;
-}
-
-/* ================= WHY US ================= */
-
-.why{
-    background:var(--navy);
-    color:white;
-}
-
-.why .section-title h2{
-    color:white;
-}
-
-.why .section-title p{
-    color:#ccd5e5;
-}
-
-.why-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:20px;
-}
-
-.why-card{
-    border:1px solid rgba(255,255,255,.12);
-    padding:30px 22px;
-    border-radius:10px;
-    background:rgba(255,255,255,.04);
-}
-
-.why-icon{
-    width:55px;
-    height:55px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    background:var(--orange);
-    border-radius:8px;
-    font-size:25px;
-    margin-bottom:20px;
-}
-
-.why-card h3{
-    margin-bottom:10px;
-}
-
-.why-card p{
-    color:#c9d1df;
+    font-weight:bold;
+    margin-right:10px;
 }
 
 /* ================= VISION ================= */
 
 .vision{
-    background:#f7f8fa;
+    background:white;
 }
 
 .vision-grid{
     display:grid;
     grid-template-columns:1fr 1fr;
-    gap:25px;
+    gap:50px;
+    align-items:center;
+}
+
+.vision-image{
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 12px 35px rgba(0,0,0,.12);
 }
 
 .vision-box{
-    background:white;
-    padding:40px;
-    border-radius:12px;
-    box-shadow:0 8px 25px rgba(0,0,0,.05);
+    padding:25px 0;
 }
 
 .vision-box h3{
     color:var(--navy);
-    font-size:30px;
-    margin-bottom:15px;
+    font-size:25px;
+    margin-bottom:8px;
 }
 
 .vision-box h3 span{
     color:var(--orange);
 }
 
+.vision-box p{
+    color:var(--gray);
+}
+
 .mission-list{
-    list-style:none;
+    padding-left:20px;
+    color:#475467;
 }
 
 .mission-list li{
-    padding:12px 0;
-    border-bottom:1px solid #eee;
+    margin-bottom:10px;
 }
 
-.mission-list li::before{
-    content:"01";
+/* ================= COMMITMENT ================= */
+
+.commitment{
+    background:var(--navy);
+    color:white;
+}
+
+.commitment .section-title h2{
+    color:white;
+}
+
+.commitment .section-title p{
+    color:#d5dbea;
+}
+
+.commitment-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:45px;
+    align-items:center;
+}
+
+.commitment-image{
+    border-radius:15px;
+    overflow:hidden;
+}
+
+.commitment-text p{
+    color:#e0e5ef;
+    margin-bottom:18px;
+}
+
+.commitment-points{
+    list-style:none;
+}
+
+.commitment-points li{
+    margin:13px 0;
+}
+
+.commitment-points li::before{
+    content:"✓";
     color:var(--orange);
-    font-weight:900;
-    margin-right:12px;
+    font-weight:bold;
+    margin-right:10px;
 }
-
-.mission-list li:nth-child(2)::before{content:"02";}
-.mission-list li:nth-child(3)::before{content:"03";}
-.mission-list li:nth-child(4)::before{content:"04";}
 
 /* ================= LEGAL ================= */
 
 .legal{
-    background:white;
+    background:var(--light);
 }
 
 .legal-grid{
     display:grid;
     grid-template-columns:1fr 1fr;
-    gap:25px;
+    gap:45px;
+    align-items:center;
 }
 
-.legal-card{
-    padding:25px;
-    border:1px solid #e5e7eb;
-    border-left:5px solid var(--orange);
-    border-radius:8px;
+.legal-image{
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 12px 35px rgba(0,0,0,.1);
 }
 
-.legal-card span{
-    font-size:13px;
-    color:var(--gray);
-    display:block;
-    margin-bottom:5px;
-}
-
-.legal-card strong{
-    font-size:18px;
-    color:var(--navy);
-}
-
-/* ================= PROCESS ================= */
-
-.process{
-    background:var(--light);
-}
-
-.process-grid{
+.legal-cards{
     display:grid;
-    grid-template-columns:repeat(5,1fr);
     gap:15px;
 }
 
-.process-card{
-    text-align:center;
-    padding:25px 15px;
+.legal-card{
     background:white;
+    padding:20px;
     border-radius:10px;
+    border-left:5px solid var(--orange);
+    box-shadow:0 5px 20px rgba(0,0,0,.06);
 }
 
-.process-card .num{
-    width:45px;
-    height:45px;
-    border-radius:50%;
-    background:var(--orange);
-    color:white;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    margin:0 auto 15px;
+.legal-card small{
+    color:var(--orange);
     font-weight:bold;
 }
 
-.process-card h3{
+.legal-card strong{
+    display:block;
     color:var(--navy);
-    font-size:17px;
+    font-size:18px;
+    margin-top:3px;
 }
 
-/* ================= CTA ================= */
+/* ================= COMPANY PROFILE ================= */
 
-.cta{
-    background:
-    linear-gradient(rgba(7,25,54,.92),rgba(7,25,54,.92)),
-    url("hero.jpg") center/cover;
-    text-align:center;
+.profile{
+    background:white;
+}
+
+.profile-box{
+    background:var(--navy);
     color:white;
+    border-radius:18px;
+    padding:50px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:30px;
 }
 
-.cta h2{
-    font-size:48px;
-    margin-bottom:15px;
+.profile-box h2{
+    font-size:32px;
 }
 
-.cta p{
-    max-width:650px;
-    margin:0 auto 30px;
-    color:#dce3ee;
+.profile-box p{
+    color:#dce3ef;
+    margin-top:8px;
+}
+
+.profile-btn{
+    background:var(--orange);
+    padding:14px 25px;
+    border-radius:8px;
+    font-weight:bold;
+    white-space:nowrap;
 }
 
 /* ================= CONTACT ================= */
 
 .contact{
-    background:white;
+    background:var(--light);
 }
 
 .contact-grid{
     display:grid;
     grid-template-columns:1fr 1fr;
-    gap:50px;
+    gap:45px;
+}
+
+.contact-image{
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 12px 35px rgba(0,0,0,.1);
 }
 
 .contact-info{
-    display:flex;
-    flex-direction:column;
-    gap:20px;
-}
-
-.contact-item{
-    display:flex;
+    display:grid;
     gap:18px;
-    align-items:flex-start;
 }
 
-.contact-icon{
-    min-width:50px;
-    height:50px;
-    background:var(--orange);
-    color:white;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    border-radius:8px;
-    font-size:22px;
-}
-
-.contact-item h4{
-    color:var(--navy);
-}
-
-.contact-item p{
-    color:#555;
-}
-
-.map-box{
-    min-height:350px;
-    background:#eef1f5;
+.contact-card{
+    background:white;
+    padding:22px;
     border-radius:12px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    padding:30px;
-    color:#777;
+    box-shadow:0 5px 20px rgba(0,0,0,.06);
+}
+
+.contact-card h3{
+    color:var(--orange);
+    margin-bottom:5px;
+}
+
+.contact-card p{
+    color:#475467;
+}
+
+.whatsapp{
+    display:inline-block;
+    background:#20b858;
+    color:white;
+    padding:14px 24px;
+    border-radius:8px;
+    font-weight:bold;
+    margin-top:10px;
 }
 
 /* ================= FOOTER ================= */
 
 footer{
-    background:var(--navy2);
+    background:#071731;
     color:white;
-    padding:55px 7% 25px;
+    padding:35px 20px;
+    text-align:center;
 }
 
-.footer-grid{
-    max-width:1200px;
-    margin:auto;
-    display:grid;
-    grid-template-columns:1.5fr 1fr 1fr;
-    gap:40px;
-}
-
-.footer-logo{
-    font-size:28px;
-    font-weight:900;
-}
-
-.footer-logo span{
+footer strong{
     color:var(--orange);
 }
 
-footer h3{
-    margin-bottom:18px;
+footer p{
+    color:#b8c1d2;
+    margin-top:5px;
+    font-size:14px;
 }
 
-footer p,
-footer li{
-    color:#adb8ca;
-}
+/* ================= FLOAT WA ================= */
 
-footer ul{
-    list-style:none;
-}
-
-footer li{
-    margin-bottom:8px;
-}
-
-.footer-bottom{
-    max-width:1200px;
-    margin:40px auto 0;
-    padding-top:20px;
-    border-top:1px solid rgba(255,255,255,.1);
-    text-align:center;
-    color:#8996aa;
-    font-size:13px;
-}
-
-/* ================= WHATSAPP ================= */
-
-.wa{
+.float-wa{
     position:fixed;
-    right:22px;
-    bottom:22px;
+    right:20px;
+    bottom:20px;
     width:58px;
     height:58px;
     border-radius:50%;
-    background:#25d366;
+    background:#20b858;
     color:white;
     display:flex;
     align-items:center;
     justify-content:center;
-    font-size:27px;
+    font-size:28px;
     z-index:1000;
     box-shadow:0 5px 20px rgba(0,0,0,.25);
 }
 
-/* ================= RESPONSIVE ================= */
+/* ================= MOBILE ================= */
 
-@media(max-width:900px){
+@media(max-width:800px){
 
-    .nav-links{
-        position:absolute;
-        top:78px;
-        left:0;
-        width:100%;
-        background:var(--navy2);
-        display:none;
-        flex-direction:column;
-        padding:25px;
-        gap:20px;
+    .nav-container{
+        height:68px;
     }
 
-    .nav-links.active{
-        display:flex;
+    .logo-area strong{
+        font-size:16px;
     }
 
     .menu-btn{
         display:block;
     }
 
-    .about-grid,
-    .area-grid,
-    .contact-grid,
-    .vision-grid{
-        grid-template-columns:1fr;
+    .nav-menu{
+        position:absolute;
+        top:68px;
+        left:0;
+        width:100%;
+        background:var(--navy);
+        display:none;
+        flex-direction:column;
+        padding:20px;
+        gap:18px;
     }
 
-    .service-grid{
-        grid-template-columns:1fr 1fr;
-    }
-
-    .why-grid{
-        grid-template-columns:1fr 1fr;
-    }
-
-    .process-grid{
-        grid-template-columns:1fr 1fr;
-    }
-
-    .footer-grid{
-        grid-template-columns:1fr 1fr;
-    }
-}
-
-@media(max-width:600px){
-
-    section{
-        padding:70px 20px;
-    }
-
-    .navbar{
-        padding:0 20px;
-    }
-
-    .logo{
-        font-size:20px;
+    .nav-menu.active{
+        display:flex;
     }
 
     .hero{
-        padding:120px 20px 70px;
+        padding-top:68px;
     }
 
-    .hero h1{
+    .hero-image{
+        height:650px;
+        min-height:650px;
+    }
+
+    .hero-overlay{
+        inset:68px 0 0 0;
+        background:rgba(11,33,72,.72);
+    }
+
+    .hero-content{
+        transform:translate(-50%,-40%);
+    }
+
+    .hero-content h1{
         font-size:43px;
     }
 
-    .hero p{
+    .hero-content p{
         font-size:16px;
     }
 
-    .section-title h2{
-        font-size:36px;
+    section{
+        padding:65px 18px;
     }
 
-    .service-grid,
-    .why-grid,
-    .process-grid,
+    .section-title h2{
+        font-size:34px;
+    }
+
+    .about-grid,
+    .area-grid,
+    .vision-grid,
+    .commitment-grid,
     .legal-grid,
-    .footer-grid{
+    .contact-grid{
+        grid-template-columns:1fr;
+        gap:30px;
+    }
+
+    .service-grid{
         grid-template-columns:1fr;
     }
 
-    .about-image img,
-    .area-image img{
-        height:330px;
+    .profile-box{
+        padding:30px;
+        flex-direction:column;
+        align-items:flex-start;
     }
 
-    .cta h2{
-        font-size:35px;
+    .profile-box h2{
+        font-size:27px;
+    }
+
+    .profile-btn{
+        white-space:normal;
+    }
+
+    .service-card img{
+        height:210px;
+    }
+}
+
+@media(max-width:450px){
+
+    .hero-content h1{
+        font-size:36px;
     }
 
     .btn{
-        width:100%;
-        text-align:center;
+        display:block;
+        width:max-content;
+        margin-bottom:10px;
+    }
+
+    .about-text,
+    .area-text,
+    .vision-box,
+    .commitment-text{
+        font-size:15px;
     }
 }
 </style>
@@ -776,29 +742,26 @@ footer li{
 
 <!-- ================= NAVBAR ================= -->
 
-<header>
-<nav class="navbar">
+<header class="navbar">
+<div class="nav-container">
 
-<a href="#home" class="logo">
-    DBL<span>GL</span>
-</a>
-
-<div class="menu-btn" onclick="toggleMenu()">☰</div>
-
-<div class="nav-links" id="navLinks">
-    <a href="#home">HOME</a>
-    <a href="#about">TENTANG KAMI</a>
-    <a href="#services">LAYANAN</a>
-    <a href="#area">AREA LAYANAN</a>
-    <a href="#vision">VISI & MISI</a>
-    <a href="#legal">LEGALITAS</a>
-    <a href="#contact">KONTAK</a>
-    <a class="nav-btn" href="https://wa.me/6282119783890" target="_blank">
-        HUBUNGI KAMI
+    <a href="#home" class="logo-area">
+        <strong>DBL <span>GLOBAL LOGISTICS</span></strong>
     </a>
-</div>
 
-</nav>
+    <div class="menu-btn" onclick="toggleMenu()">☰</div>
+
+    <ul class="nav-menu" id="navMenu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">Tentang Kami</a></li>
+        <li><a href="#services">Layanan</a></li>
+        <li><a href="#area">Area Layanan</a></li>
+        <li><a href="#vision">Visi & Misi</a></li>
+        <li><a href="#legal">Legalitas</a></li>
+        <li><a href="#contact">Kontak</a></li>
+    </ul>
+
+</div>
 </header>
 
 
@@ -806,36 +769,37 @@ footer li{
 
 <section class="hero" id="home">
 
-<div class="hero-content">
+    <img
+        class="hero-image"
+        src="Solusi Pengiriman Cepat, Aman, dan Terpercaya.jpg"
+        alt="PT DBL Global Logistics">
 
-<div class="hero-label">
-PT. DBL GLOBAL LOGISTICS
-</div>
+    <div class="hero-overlay"></div>
 
-<h1>
-SOLUSI PENGIRIMAN
-<span>CEPAT, AMAN & TERPERCAYA</span>
-</h1>
+    <div class="hero-content">
 
-<p>
-Jasa Pengurusan Transportasi (JPT) dengan layanan logistik
-yang profesional, efisien dan terpercaya untuk kebutuhan
-pengiriman barang Anda.
-</p>
+        <small>PT. DBL GLOBAL LOGISTICS</small>
 
-<div class="hero-buttons">
+        <h1>
+            Solusi Pengiriman
+            <span>Cepat & Terpercaya</span>
+        </h1>
 
-<a href="#services" class="btn btn-orange">
-LIHAT LAYANAN
-</a>
+        <p>
+            Jasa Pengurusan Transportasi (JPT) yang memberikan
+            solusi pengiriman barang secara aman, profesional,
+            efisien, dan tepat waktu.
+        </p>
 
-<a href="https://wa.me/6282119783890" target="_blank" class="btn btn-outline">
-KONSULTASI SEKARANG
-</a>
+        <a href="#services" class="btn btn-orange">
+            Lihat Layanan
+        </a>
 
-</div>
+        <a href="#contact" class="btn btn-outline">
+            Hubungi Kami
+        </a>
 
-</div>
+    </div>
 
 </section>
 
@@ -846,46 +810,54 @@ KONSULTASI SEKARANG
 
 <div class="container">
 
-<div class="section-title">
-<small>Tentang Kami</small>
-<h2>ABOUT <span>COMPANY</span></h2>
-</div>
+    <div class="section-title">
+        <small>TENTANG PERUSAHAAN</small>
+        <h2>About <span>Company</span></h2>
+    </div>
 
-<div class="about-grid">
+    <div class="about-grid">
 
-<div class="about-image">
-<img src="About Company terbaru.jpg" alt="PT DBL Global Logistics">
-</div>
+        <div class="about-image">
+            <img
+                src="About Company terbaru.jpg"
+                alt="Tentang PT DBL Global Logistics">
+        </div>
 
-<div class="about-text">
+        <div class="about-text">
 
-<p>
-<strong>PT. DBL GLOBAL LOGISTICS</strong> adalah perusahaan
-yang bergerak di bidang jasa pengurusan transportasi (JPT)
-yang berfokus pada pengelolaan dan pengiriman barang secara
-efisien, aman, dan terpercaya.
-</p>
+            <p>
+                <span class="highlight">PT. DBL GLOBAL LOGISTICS</span>
+                adalah perusahaan yang bergerak di bidang
+                <strong>Jasa Pengurusan Transportasi (JPT)</strong>
+                yang berfokus pada pengelolaan dan pengiriman
+                barang secara efisien, aman, dan terpercaya.
+            </p>
 
-<p>
-Didirikan dengan tujuan untuk memenuhi kebutuhan distribusi
-dan logistik yang terus berkembang, perusahaan hadir sebagai
-solusi bagi individu maupun pelaku usaha dalam mengelola
-pengiriman barang secara profesional.
-</p>
+            <p>
+                Didirikan dengan tujuan untuk memenuhi kebutuhan
+                distribusi dan logistik yang terus berkembang,
+                perusahaan hadir sebagai solusi bagi individu
+                maupun pelaku usaha dalam mengelola pengiriman
+                barang secara profesional.
+            </p>
 
-<p>
-PT. DBL GLOBAL LOGISTICS mengedepankan sistem kerja yang
-fleksibel dengan menjalin kerja sama bersama mitra transportasi
-yang berpengalaman.
-</p>
+            <p>
+                Dengan menjalin kerja sama bersama mitra
+                transportasi yang berpengalaman, kami berupaya
+                memberikan layanan yang cepat, tepat waktu,
+                fleksibel, dan kompetitif.
+            </p>
 
-<div class="highlight">
-Your Trusted Logistics Partner
-</div>
+            <p>
+                Kepuasan pelanggan dan kualitas pelayanan menjadi
+                prioritas kami dalam membangun hubungan kerja sama
+                jangka panjang.
+            </p>
 
-</div>
+        </div>
 
-</div>
+    </div>
+
 </div>
 
 </section>
@@ -897,73 +869,64 @@ Your Trusted Logistics Partner
 
 <div class="container">
 
-<div class="section-title">
-<small>Solusi Logistik</small>
-<h2>LAYANAN <span>KAMI</span></h2>
-<p>
-Kami menyediakan layanan jasa pengurusan transportasi
-yang berfokus pada efisiensi, ketepatan waktu dan keamanan
-pengiriman barang.
-</p>
-</div>
+    <div class="section-title">
+        <small>JASA KAMI</small>
+        <h2>Layanan <span>Kami</span></h2>
+        <p>
+            Solusi jasa pengurusan transportasi untuk kebutuhan
+            pengiriman dan distribusi barang.
+        </p>
+    </div>
 
-<div class="service-grid">
+    <div class="service-grid">
 
-<div class="service-card">
-<div class="service-number">01</div>
-<h3>Freight Forwarding</h3>
-<p>
-Jasa pengurusan pengiriman barang dengan koordinasi
-transportasi yang terencana dan profesional.
-</p>
-</div>
+        <div class="service-card">
+            <img src="LAYANAN KAMI TERBARU.jpg" alt="Jasa Pengurusan Transportasi">
+            <div class="service-body">
+                <h3>Jasa Pengurusan Transportasi</h3>
+                <p>
+                    Pengelolaan dan koordinasi pengiriman barang
+                    melalui jaringan transportasi yang sesuai
+                    dengan kebutuhan pelanggan.
+                </p>
+            </div>
+        </div>
 
-<div class="service-card">
-<div class="service-number">02</div>
-<h3>Distribusi Logistik</h3>
-<p>
-Pengelolaan distribusi barang secara efektif untuk
-mendukung kebutuhan bisnis dan pelanggan.
-</p>
-</div>
+        <div class="service-card">
+            <img src="Company Profile.jpg" alt="Distribusi Logistik">
+            <div class="service-body">
+                <h3>Distribusi & Logistik</h3>
+                <p>
+                    Membantu proses distribusi barang agar berjalan
+                    lebih efektif, terkoordinasi dan tepat waktu.
+                </p>
+            </div>
+        </div>
 
-<div class="service-card">
-<div class="service-number">03</div>
-<h3>Pengiriman Antar Kota</h3>
-<p>
-Koordinasi pengiriman barang antar kota dengan dukungan
-mitra transportasi yang berpengalaman.
-</p>
-</div>
+        <div class="service-card">
+            <img src="Area Layanan.jpg" alt="Pengiriman Antar Kota">
+            <div class="service-body">
+                <h3>Pengiriman Antar Kota</h3>
+                <p>
+                    Koordinasi pengiriman barang antar kota dengan
+                    dukungan mitra transportasi yang berpengalaman.
+                </p>
+            </div>
+        </div>
 
-<div class="service-card">
-<div class="service-number">04</div>
-<h3>Transportasi Darat</h3>
-<p>
-Kerja sama dengan mitra transportasi darat untuk memenuhi
-kebutuhan pengiriman berbagai jenis barang.
-</p>
-</div>
+        <div class="service-card">
+            <img src="Komitmen & Garansi.jpg" alt="Monitoring Pengiriman">
+            <div class="service-body">
+                <h3>Monitoring Pengiriman</h3>
+                <p>
+                    Pemantauan dan pengelolaan proses pengiriman
+                    untuk membantu menjaga keamanan dan ketepatan
+                    waktu barang.
+                </p>
+            </div>
+        </div>
 
-<div class="service-card">
-<div class="service-number">05</div>
-<h3>Monitoring Pengiriman</h3>
-<p>
-Monitoring dan pengelolaan pengiriman barang secara berkala
-untuk memastikan proses berjalan sesuai rencana.
-</p>
-</div>
-
-<div class="service-card">
-<div class="service-number">06</div>
-<h3>Solusi Logistik</h3>
-<p>
-Solusi transportasi yang fleksibel dan dapat disesuaikan
-dengan kebutuhan pelanggan.
-</p>
-</div>
-
-</div>
+    </div>
 
 </div>
 
@@ -976,99 +939,46 @@ dengan kebutuhan pelanggan.
 
 <div class="container">
 
-<div class="area-grid">
+    <div class="section-title">
+        <small>JANGKAUAN KAMI</small>
+        <h2>Area <span>Layanan</span></h2>
+    </div>
 
-<div>
+    <div class="area-grid">
 
-<div class="section-title">
-<small>Jangkauan Kami</small>
-<h2>AREA <span>LAYANAN</span></h2>
-</div>
+        <div class="area-image">
+            <img
+                src="Area Layanan.jpg"
+                alt="Area Layanan PT DBL Global Logistics">
+        </div>
 
-<p>
-Kami melayani pengiriman dalam kota, antar kota, hingga ke
-seluruh wilayah Indonesia.
-</p>
+        <div class="area-text">
 
-<p style="margin-top:18px;">
-Dengan dukungan jaringan logistik yang luas, kami siap
-memastikan setiap pengiriman dapat menjangkau berbagai
-daerah secara efektif dan efisien.
-</p>
+            <h3>Melayani Kebutuhan Logistik Anda</h3>
 
-<ul class="area-list">
-<li>Pengiriman Dalam Kota</li>
-<li>Pengiriman Antar Kota</li>
-<li>Jabodetabek</li>
-<li>Pulau Jawa</li>
-<li>Sumatera</li>
-<li>Seluruh Wilayah Indonesia</li>
-</ul>
+            <p>
+                Kami melayani kebutuhan pengiriman dalam kota,
+                antar kota, hingga berbagai wilayah di Indonesia
+                melalui jaringan mitra transportasi.
+            </p>
 
-</div>
+            <p>
+                Dengan dukungan jaringan logistik yang luas,
+                kami berupaya memastikan setiap pengiriman dapat
+                menjangkau berbagai daerah secara efektif dan efisien.
+            </p>
 
-<div class="area-image">
-<img src="Area Layanan.jpg" alt="Area Layanan DBL Global Logistics">
-</div>
+            <ul class="area-list">
+                <li>Pengiriman Dalam Kota</li>
+                <li>Pengiriman Antar Kota</li>
+                <li>Distribusi Antar Wilayah</li>
+                <li>Koordinasi Transportasi Darat</li>
+                <li>Jaringan Mitra Transportasi</li>
+            </ul>
 
-</div>
+        </div>
 
-</div>
-
-</section>
-
-
-<!-- ================= WHY US ================= -->
-
-<section class="why">
-
-<div class="container">
-
-<div class="section-title">
-<small>Mengapa DBL?</small>
-<h2>KENAPA <span>KAMI?</span></h2>
-<p>
-Komitmen kami adalah memberikan pelayanan logistik yang
-profesional dan dapat dipercaya.
-</p>
-</div>
-
-<div class="why-grid">
-
-<div class="why-card">
-<div class="why-icon">✓</div>
-<h3>Aman</h3>
-<p>
-Mengutamakan keamanan barang selama proses pengiriman.
-</p>
-</div>
-
-<div class="why-card">
-<div class="why-icon">⚡</div>
-<h3>Cepat</h3>
-<p>
-Mengutamakan efisiensi dan ketepatan waktu pengiriman.
-</p>
-</div>
-
-<div class="why-card">
-<div class="why-icon">★</div>
-<h3>Terpercaya</h3>
-<p>
-Bekerja secara profesional dengan mitra transportasi
-berpengalaman.
-</p>
-</div>
-
-<div class="why-card">
-<div class="why-icon">◆</div>
-<h3>Profesional</h3>
-<p>
-Memberikan solusi transportasi sesuai kebutuhan pelanggan.
-</p>
-</div>
-
-</div>
+    </div>
 
 </div>
 
@@ -1081,97 +991,111 @@ Memberikan solusi transportasi sesuai kebutuhan pelanggan.
 
 <div class="container">
 
-<div class="section-title">
-<small>Arah Perusahaan</small>
-<h2>VISI <span>& MISI</span></h2>
-</div>
+    <div class="section-title">
+        <small>ARAH PERUSAHAAN</small>
+        <h2>Visi <span>& Misi</span></h2>
+    </div>
 
-<div class="vision-grid">
+    <div class="vision-grid">
 
-<div class="vision-box">
+        <div>
 
-<h3>VISI <span>KAMI</span></h3>
+            <div class="vision-box">
+                <h3>VISI</h3>
+                <p>
+                    Menjadi perusahaan jasa pengurusan transportasi
+                    yang terpercaya, profesional, dan berkembang
+                    di Indonesia.
+                </p>
+            </div>
 
-<p>
-Menjadi perusahaan jasa pengurusan transportasi yang
-terpercaya, profesional, dan berkembang di Indonesia.
-</p>
+            <div class="vision-box">
+                <h3>MISI</h3>
 
-</div>
+                <ol class="mission-list">
+                    <li>
+                        Memberikan layanan pengurusan transportasi
+                        yang cepat, aman, dan tepat waktu.
+                    </li>
 
-<div class="vision-box">
+                    <li>
+                        Menjalin kerja sama yang profesional
+                        dengan mitra dan pelanggan.
+                    </li>
 
-<h3>MISI <span>KAMI</span></h3>
+                    <li>
+                        Mengutamakan kepuasan pelanggan dalam
+                        setiap layanan.
+                    </li>
 
-<ul class="mission-list">
+                    <li>
+                        Mengembangkan sistem kerja yang efisien
+                        dan berkelanjutan.
+                    </li>
+                </ol>
 
-<li>
-Memberikan layanan pengurusan transportasi yang cepat,
-aman, dan tepat waktu.
-</li>
+            </div>
 
-<li>
-Menjalin kerja sama yang profesional dengan mitra dan pelanggan.
-</li>
+        </div>
 
-<li>
-Mengutamakan kepuasan pelanggan dalam setiap layanan.
-</li>
+        <div class="vision-image">
+            <img
+                src="VISI & MISI TERBARU.jpg"
+                alt="Visi dan Misi">
+        </div>
 
-<li>
-Mengembangkan sistem kerja yang efisien dan berkelanjutan.
-</li>
-
-</ul>
-
-</div>
-
-</div>
+    </div>
 
 </div>
 
 </section>
 
 
-<!-- ================= PROCESS ================= -->
+<!-- ================= COMMITMENT ================= -->
 
-<section class="process">
+<section class="commitment">
 
 <div class="container">
 
-<div class="section-title">
-<small>Alur Layanan</small>
-<h2>PROSES <span>KERJA KAMI</span></h2>
-</div>
+    <div class="section-title">
+        <small>KOMITMEN KAMI</small>
+        <h2>Komitmen <span>Garansi</span></h2>
+    </div>
 
-<div class="process-grid">
+    <div class="commitment-grid">
 
-<div class="process-card">
-<div class="num">1</div>
-<h3>Konsultasi</h3>
-</div>
+        <div class="commitment-image">
+            <img
+                src="Komitmen & Garansi.jpg"
+                alt="Komitmen PT DBL Global Logistics">
+        </div>
 
-<div class="process-card">
-<div class="num">2</div>
-<h3>Perencanaan</h3>
-</div>
+        <div class="commitment-text">
 
-<div class="process-card">
-<div class="num">3</div>
-<h3>Pengiriman</h3>
-</div>
+            <p>
+                Kami berkomitmen untuk memberikan layanan
+                pengiriman yang aman, cepat, dan terpercaya
+                kepada setiap pelanggan.
+            </p>
 
-<div class="process-card">
-<div class="num">4</div>
-<h3>Monitoring</h3>
-</div>
+            <p>
+                Setiap proses pengiriman ditangani secara
+                profesional dengan standar operasional yang jelas.
+                Kami juga mengutamakan koordinasi dan komunikasi
+                yang baik selama proses pengiriman.
+            </p>
 
-<div class="process-card">
-<div class="num">5</div>
-<h3>Selesai</h3>
-</div>
+            <ul class="commitment-points">
+                <li>Pelayanan profesional</li>
+                <li>Koordinasi pengiriman yang jelas</li>
+                <li>Mengutamakan keamanan barang</li>
+                <li>Ketepatan waktu pengiriman</li>
+                <li>Kepuasan pelanggan sebagai prioritas</li>
+            </ul>
 
-</div>
+        </div>
+
+    </div>
 
 </div>
 
@@ -1184,98 +1108,76 @@ Mengembangkan sistem kerja yang efisien dan berkelanjutan.
 
 <div class="container">
 
-<div class="section-title">
-<small>Dokumen Perusahaan</small>
-<h2>LEGALITAS <span>PERUSAHAAN</span></h2>
-</div>
+    <div class="section-title">
+        <small>PERUSAHAAN TERDAFTAR</small>
+        <h2>Legalitas <span>Perusahaan</span></h2>
+    </div>
 
-<div class="legal-grid">
+    <div class="legal-grid">
 
-<div class="legal-card">
-<span>NOMOR INDUK BERUSAHA (NIB)</span>
-<strong>0505260122314</strong>
-</div>
+        <div class="legal-image">
+            <img
+                src="Legalitas Perusahaan.jpg"
+                alt="Legalitas PT DBL Global Logistics">
+        </div>
 
-<div class="legal-card">
-<span>PENGESAHAN KEMENKUMHAM (AHU)</span>
-<strong>AHU-A004361.AH.01.31.Tahun 2026</strong>
-</div>
+        <div class="legal-cards">
 
-<div class="legal-card">
-<span>NPWP</span>
-<strong>1000-0000-0946-5632</strong>
-</div>
+            <div class="legal-card">
+                <small>NOMOR INDUK BERUSAHA (NIB)</small>
+                <strong>0505260122314</strong>
+            </div>
 
-<div class="legal-card">
-<span>JASA PENGURUSAN TRANSPORTASI</span>
-<strong>SIUJPT</strong>
-</div>
+            <div class="legal-card">
+                <small>PENGESAHAN AHU</small>
+                <strong>AHU-A004361.AH.01.31.Tahun 2026</strong>
+            </div>
 
-</div>
+            <div class="legal-card">
+                <small>NPWP</small>
+                <strong>1000-0000-0946-5632</strong>
+            </div>
 
-</div>
+            <p style="color:#667085;font-size:14px;">
+                PT. DBL GLOBAL LOGISTICS berkomitmen menjalankan
+                kegiatan usaha sesuai dengan ketentuan dan
+                legalitas perusahaan yang berlaku.
+            </p>
 
-</section>
+        </div>
 
-
-<!-- ================= COMMITMENT ================= -->
-
-<section class="why">
-
-<div class="container">
-
-<div class="section-title">
-<small>Komitmen Kami</small>
-<h2>KEAMANAN & <span>KEPUASAN</span></h2>
-
-<p>
-Kami berkomitmen untuk memberikan layanan pengiriman yang
-aman, cepat dan terpercaya kepada setiap pelanggan.
-</p>
-
-</div>
-
-<div style="max-width:850px;color:#d5dcea;font-size:18px;">
-
-<p>
-Setiap proses pengiriman ditangani secara profesional dengan
-standar operasional yang jelas. Kami juga menjamin keamanan
-barang selama proses pengiriman serta memberikan solusi
-terbaik apabila terjadi kendala di lapangan.
-</p>
-
-<br>
-
-<p>
-Kepuasan pelanggan adalah prioritas utama kami dalam setiap
-layanan yang kami berikan.
-</p>
-
-</div>
+    </div>
 
 </div>
 
 </section>
 
 
-<!-- ================= CTA ================= -->
+<!-- ================= PROFILE ================= -->
 
-<section class="cta">
+<section class="profile">
 
 <div class="container">
 
-<h2>SIAP MENGIRIM BARANG ANDA?</h2>
+    <div class="profile-box">
 
-<p>
-Konsultasikan kebutuhan transportasi dan pengiriman Anda
-bersama PT. DBL GLOBAL LOGISTICS.
-</p>
+        <div>
+            <h2>Company Profile</h2>
 
-<a href="https://wa.me/6282119783890?text=Halo%20PT.%20DBL%20GLOBAL%20LOGISTICS,%20saya%20ingin%20konsultasi%20mengenai%20pengiriman." 
-target="_blank"
-class="btn btn-orange">
-HUBUNGI KAMI VIA WHATSAPP
-</a>
+            <p>
+                Kenali lebih jauh PT. DBL GLOBAL LOGISTICS
+                melalui company profile perusahaan kami.
+            </p>
+        </div>
+
+        <a
+            href="Company Profile.pdf"
+            target="_blank"
+            class="profile-btn">
+            📄 Lihat Company Profile
+        </a>
+
+    </div>
 
 </div>
 
@@ -1288,84 +1190,52 @@ HUBUNGI KAMI VIA WHATSAPP
 
 <div class="container">
 
-<div class="section-title">
-<small>Hubungi Kami</small>
-<h2>KONTAK <span>KAMI</span></h2>
-</div>
+    <div class="section-title">
+        <small>HUBUNGI KAMI</small>
+        <h2>Kontak <span>Kami</span></h2>
+    </div>
 
-<div class="contact-grid">
+    <div class="contact-grid">
 
-<div class="contact-info">
+        <div class="contact-image">
+            <img
+                src="kontak kami.jpg"
+                alt="Kontak PT DBL Global Logistics">
+        </div>
 
-<div class="contact-item">
+        <div class="contact-info">
 
-<div class="contact-icon">📍</div>
+            <div class="contact-card">
+                <h3>📍 Alamat</h3>
+                <p>
+                    Perum Griya Tirta Indah 1 No.20
+                    RT 000 / RW 000, Tirto,
+                    Pekalongan Barat,
+                    Kota Pekalongan,
+                    Jawa Tengah 51151
+                </p>
+            </div>
 
-<div>
-<h4>Alamat</h4>
-<p>
-Perum Griya Tirta Indah 1 No.20 RT 000 / RW 000,
-Tirto, Pekalongan Barat, Kota Pekalongan,
-Jawa Tengah 51151
-</p>
-</div>
+            <div class="contact-card">
+                <h3>📞 Telepon / WhatsApp</h3>
+                <p>0821-1978-3890</p>
 
-</div>
+                <a
+                    href="https://wa.me/6282119783890"
+                    target="_blank"
+                    class="whatsapp">
+                    💬 Chat WhatsApp
+                </a>
+            </div>
 
-<div class="contact-item">
+            <div class="contact-card">
+                <h3>✉️ Email</h3>
+                <p>dblgloballogistics@gmail.com</p>
+            </div>
 
-<div class="contact-icon">☎</div>
+        </div>
 
-<div>
-<h4>Telepon / WhatsApp</h4>
-<p>
-<a href="https://wa.me/6282119783890" target="_blank">
-0821-1978-3890
-</a>
-</p>
-</div>
-
-</div>
-
-<div class="contact-item">
-
-<div class="contact-icon">✉</div>
-
-<div>
-<h4>Email</h4>
-<p>
-dblgloballogistics@gmail.com
-</p>
-</div>
-
-</div>
-
-</div>
-
-<div class="map-box">
-
-<div>
-<h3 style="color:#0b234b;margin-bottom:10px;">
-PT. DBL GLOBAL LOGISTICS
-</h3>
-
-<p>
-Pekalongan, Jawa Tengah
-</p>
-
-<br>
-
-<a href="https://www.google.com/maps/search/?api=1&query=Perum+Griya+Tirta+Indah+1+Pekalongan"
-target="_blank"
-class="btn btn-orange">
-BUKA GOOGLE MAPS
-</a>
-
-</div>
-
-</div>
-
-</div>
+    </div>
 
 </div>
 
@@ -1376,67 +1246,27 @@ BUKA GOOGLE MAPS
 
 <footer>
 
-<div class="footer-grid">
+    <strong>PT. DBL GLOBAL LOGISTICS</strong>
 
-<div>
+    <p>
+        Your Trusted Logistics Partner
+    </p>
 
-<div class="footer-logo">
-DBL<span> GLOBAL LOGISTICS</span>
-</div>
-
-<p style="margin-top:15px;">
-Your Trusted Logistics Partner.
-</p>
-
-<p style="margin-top:10px;">
-Jasa Pengurusan Transportasi (JPT) yang profesional,
-aman dan terpercaya.
-</p>
-
-</div>
-
-<div>
-
-<h3>MENU</h3>
-
-<ul>
-<li><a href="#home">Home</a></li>
-<li><a href="#about">Tentang Kami</a></li>
-<li><a href="#services">Layanan</a></li>
-<li><a href="#area">Area Layanan</a></li>
-<li><a href="#legal">Legalitas</a></li>
-</ul>
-
-</div>
-
-<div>
-
-<h3>KONTAK</h3>
-
-<ul>
-<li>0821-1978-3890</li>
-<li>dblgloballogistics@gmail.com</li>
-<li>Pekalongan, Jawa Tengah</li>
-</ul>
-
-</div>
-
-</div>
-
-<div class="footer-bottom">
-© 2026 PT. DBL GLOBAL LOGISTICS. All Rights Reserved.
-</div>
+    <p>
+        © 2026 PT. DBL GLOBAL LOGISTICS. All Rights Reserved.
+    </p>
 
 </footer>
 
 
-<!-- ================= WHATSAPP FLOATING ================= -->
+<!-- FLOATING WHATSAPP -->
 
-<a class="wa"
-href="https://wa.me/6282119783890?text=Halo%20PT.%20DBL%20GLOBAL%20LOGISTICS"
-target="_blank"
-title="Chat WhatsApp">
-☎
+<a
+    href="https://wa.me/6282119783890"
+    target="_blank"
+    class="float-wa"
+    aria-label="WhatsApp">
+    ☎
 </a>
 
 
@@ -1444,17 +1274,17 @@ title="Chat WhatsApp">
 
 function toggleMenu(){
 
-    const menu = document.getElementById("navLinks");
+    const menu = document.getElementById("navMenu");
 
     menu.classList.toggle("active");
 
 }
 
-document.querySelectorAll(".nav-links a").forEach(function(link){
+document.querySelectorAll(".nav-menu a").forEach(function(link){
 
-    link.addEventListener("click",function(){
+    link.addEventListener("click", function(){
 
-        document.getElementById("navLinks").classList.remove("active");
+        document.getElementById("navMenu").classList.remove("active");
 
     });
 
